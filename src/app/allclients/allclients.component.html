@@ -17,10 +17,29 @@
         <td><span style="word-break:break-all;">{{ Client.phonenumber }}</span></td>
         <td style="text-transform: capitalize">{{ Client.firstname }}</td>
         <td style="text-transform: capitalize">{{ Client.surname }}</td>
-        <td><button (click)='deleteById(Client.id)'>DELETE</button><tr>
-          <!-- clicking update button would send current row data to populate client form -->
-        <button (click)='updateById(Client.id,"fdi")'>UPDATE</button></td>
+        <td><button (click)='deleteById(Client.id)'>DELETE</button>
+      <tr>
+        <!-- clicking update button would send current row data to populate client form -->
+        <button (click)='onSelect(Client)'>EDIT</button></td>
       </tr>
     </tbody>
+
+
   </table>
+  <h2>{{selectedClient.firstname}} {{selectedClient.surname}} Details</h2>
+  <div *ngIf="selectedClient">
+    <div><span>ID: </span>{{selectedClient.id}}</div>
+
+    <div>
+      <label>First Name:
+        <input [(ngModel)]="selectedClient.firstname" placeholder="First Name" />
+      </label><br>
+      <label>Last Name:
+        <input [(ngModel)]="selectedClient.surname" placeholder="Surname" />
+      </label>
+      <button type="button" (click)='update(selectedClient)'>UPDATE</button> 
+    </div>
+
+
+  </div>
 </div>

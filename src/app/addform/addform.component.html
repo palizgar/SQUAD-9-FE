@@ -10,14 +10,14 @@
         required maxlength="64" 
         required pattern="[A-Za-z]+"
         style="text-transform: capitalize">
-      <div *ngIf="submitted && firstName.errors" class="errors">
-        <div *ngIf="firstName.errors.required">
+      <div *ngIf="submitted && firstname.errors" class="errors">
+        <div *ngIf="firstname.errors.required">
           First name is required
         </div>
-        <div *ngIf="firstName.errors.maxlength">
+        <div *ngIf="firstname.errors.maxlength">
           First name must contain less than 64 letters
         </div>
-        <div *ngIf="firstName.errors.pattern">
+        <div *ngIf="firstname.errors.pattern">
           First name can only contain letters
         </div>
       </div>

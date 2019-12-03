@@ -13,7 +13,7 @@ export class AddformComponent implements OnInit {
   submitted = false;
   success = false;
 
-  get firstName() {
+  get firstname() {
     return this.messageForm.get('firstname');
   }
 
