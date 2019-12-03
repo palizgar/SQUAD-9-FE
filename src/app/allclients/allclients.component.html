@@ -1,5 +1,5 @@
 <div class>
-  <table class="table table-striped" style="table-layout: fixed; width: 100%">
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>id</th>
@@ -18,7 +18,8 @@
         <td style="text-transform: capitalize">{{ Client.firstname }}</td>
         <td style="text-transform: capitalize">{{ Client.surname }}</td>
         <td><button (click)='deleteById(Client.id)'>DELETE</button><tr>
-        <button (click)='updateById(Client.id,"fiii")'>UPDATE</button></td>
+          <!-- clicking update button would send current row data to populate client form -->
+        <button (click)='updateById(Client.id,"fdi")'>UPDATE</button></td>
       </tr>
     </tbody>
   </table>

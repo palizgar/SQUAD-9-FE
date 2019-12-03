@@ -9,7 +9,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class AddformComponent implements OnInit {
-
   messageForm: FormGroup;
   submitted = false;
   success = false;
